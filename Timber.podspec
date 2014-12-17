@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/ScottPetit"
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/ScottPetit/Timber.git", :commit => "51c7629a96122924072b67f349ea95cdaff3727c" }
+  s.source       = { :git => "https://github.com/ScottPetit/Timber.git" }
   s.source_files  = "Timber/*.swift"
 
   s.framework  = "Foundation"
