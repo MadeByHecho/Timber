@@ -1,0 +1,10 @@
+framework module Miles {
+  umbrella header "Miles.h"
+
+  export *
+  module * { export * }
+}
+
+module Miles.Swift {
+    header "Miles-Swift.h"
+}

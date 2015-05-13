@@ -9,7 +9,7 @@
 import Foundation
 
 public struct LogMessage {
-
+    
     public let message: String
     public let logLevel: LogLevel
     public let timestamp: NSDate
@@ -24,5 +24,5 @@ public struct LogMessage {
         self.file = file.lastPathComponent.stringByDeletingPathExtension
         self.function = function
         self.lineNumber = lineNumber
-    }    
+    }
 }

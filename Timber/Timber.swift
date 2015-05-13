@@ -15,6 +15,13 @@ public func LogError(message: String, file: String = __FILE__, function: String 
     Timber.sharedTimber().log(logMessage)
 }
 
+public func LogError(error: NSError?, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+    if let error = error {
+        let logMessage = LogMessage(message: error.description, logLevel: .Error, timestamp: NSDate(), file: file, function: function, lineNumber: line)
+        Timber.sharedTimber().log(logMessage)
+    }
+}
+
 public func LogWarn(message: String, file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     let logMessage = LogMessage(message: message, logLevel: .Warn, timestamp: NSDate(), file: file, function: function, lineNumber: line)
     Timber.sharedTimber().log(logMessage)
@@ -39,6 +46,12 @@ public func Log(message: String, file: String = __FILE__, function: String = __F
     LogInfo(message, file: file, function: function, line: line)
 }
 
+public func Trace(file: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+    LogInfo("", file: file, function: function, line: line)
+}
+
+private let sharedInstance = Timber()
+
 public class Timber {
     
     private var loggers = [Logger]()
@@ -57,13 +70,7 @@ public class Timber {
     //MARK: Private
     
     private class func sharedTimber() -> Timber {
-        if SharedTimber.instance == nil {
-            dispatch_once(&SharedTimber.token) {
-                SharedTimber.instance = Timber()
-            }
-        }
-        
-        return SharedTimber.instance!
+        return sharedInstance
     }
     
     private func addLogger(logger: Logger) {
@@ -71,7 +78,7 @@ public class Timber {
     }
     
     private func log(logMessage: LogMessage) {
-        if logMessage.logLevel.rawValue > Timber.sharedTimber().logLevel.rawValue {
+        if logMessage.logLevel > Timber.sharedTimber().logLevel {
             return
         }
         
@@ -79,10 +86,4 @@ public class Timber {
             logger.logMessage(logMessage)
         }
     }
-}
-
-private struct SharedTimber {
-//    static var logLevel: LogLevel = .Verbose
-    static var instance : Timber?
-    static var token: dispatch_once_t = 0
 }

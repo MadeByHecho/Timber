@@ -10,7 +10,7 @@ import Foundation
 
 public struct FileLogger: Logger {
     
-    init() {
+    public init() {
         FileManager.purgeOldFiles()
         FileManager.purgeOldestFilesGreaterThanCount(5)
     }
@@ -82,7 +82,7 @@ struct FileManager {
     
     static func applicationName() -> String {
         let processName = NSProcessInfo.processInfo().processName
-        if countElements(processName) > 0 {
+        if count(processName) > 0 {
             return processName
         } else {
             return "<UnnamedApp>"
@@ -91,8 +91,8 @@ struct FileManager {
     
     static func defaultLogsDirectory() -> String? {
         // Update how we get file URLs per Apple Technical Note https://developer.apple.com/library/ios/technotes/tn2406/_index.html
-        let cachesDirectoryPathURL = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).last as NSURL
-    
+        let cachesDirectoryPathURL = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).last as! NSURL
+        
         if cachesDirectoryPathURL.fileURL {
             if let cachesDirectoryPath = cachesDirectoryPathURL.path {
                 let logsDirectory = cachesDirectoryPath.stringByAppendingPathComponent("Timber")
@@ -195,9 +195,9 @@ public struct TrashMan {
                         return true
                     }
                     
-                    let firstFileDate = firstFileObject as NSDate
-                    let secondFileDate = secondFileObject as NSDate
-                                        
+                    let firstFileDate = firstFileObject as! NSDate
+                    let secondFileDate = secondFileObject as! NSDate
+                    
                     let comparisonResult = firstFileDate.compare(secondFileDate)
                     return comparisonResult == NSComparisonResult.OrderedDescending
                 })
@@ -210,5 +210,5 @@ public struct TrashMan {
             }
         }
     }
-
+    
 }

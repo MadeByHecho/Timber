@@ -14,23 +14,24 @@ public protocol MessageFormatterType {
 
 public struct MessageFormatter: MessageFormatterType {
     
+    private let calendarUnitFlags: NSCalendarUnit = .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond | .CalendarUnitNanosecond
+    private let appName = FileManager.applicationName()
+    
     public init() {
     }
     
     public func formatLogMessage(logMessage: LogMessage) -> String {
-        let calendarUnitFlags: NSCalendarUnit = .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond
-        var appName = FileManager.applicationName()
-        
         let components = NSCalendar.autoupdatingCurrentCalendar().components(calendarUnitFlags, fromDate: logMessage.timestamp)
         
-        var messageToLog = logMessage.logLevel.toString()
-        let timestampString = NSString(format: "%04ld-%02ld-%02ld %02ld:%02ld:%02ld", components.year,
+        let nanosecondString = "\(components.nanosecond)"
+        let timestampString = NSString(format: "%04ld-%02ld-%02ld %02ld:%02ld:%02ld.%@", components.year,
             components.month,
             components.day,
             components.hour,
             components.minute,
-            components.second)
-        messageToLog += " \(timestampString) \(appName) [\(logMessage.file) '\(logMessage.function)'] \(logMessage.message)"
+            components.second,
+            nanosecondString.substringToIndex(advance(nanosecondString.startIndex, 3)))
+        let messageToLog = "\(logMessage.logLevel.toString()) \(timestampString) \(appName) [\(logMessage.file) '\(logMessage.function)'] \(logMessage.message)"
         
         return messageToLog
     }

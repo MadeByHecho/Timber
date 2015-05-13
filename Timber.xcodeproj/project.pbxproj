@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2AB8D9D19CC39BB00F9138F /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9B19CC39BB00F9138F /* TestExtensions.swift */; };
 		D2AB8D9E19CC39BB00F9138F /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9C19CC39BB00F9138F /* TestLogger.swift */; };
 		D2AB8DA019CC39DA00F9138F /* TimberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9F19CC39DA00F9138F /* TimberTests.swift */; };
 		D2E8FA3319CB4E38007AA6E9 /* Timber.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E8FA3219CB4E38007AA6E9 /* Timber.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +23,8 @@
 		D2E8FA6B19CB56E2007AA6E9 /* MessageFormatter.swift in Resources */ = {isa = PBXBuildFile; fileRef = D2E8FA5219CB4EB9007AA6E9 /* MessageFormatter.swift */; };
 		D2E8FA6C19CB56E2007AA6E9 /* FileLogger.swift in Resources */ = {isa = PBXBuildFile; fileRef = D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */; };
 		D2E8FA6D19CB56E2007AA6E9 /* XcodeLogger.swift in Resources */ = {isa = PBXBuildFile; fileRef = D2E8FA5419CB4EB9007AA6E9 /* XcodeLogger.swift */; };
+		D2EF1AA81B033A0200E387B3 /* Miles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF1AA71B033A0200E387B3 /* Miles.framework */; };
+		D2EF1AAA1B033A1E00E387B3 /* Miles.framework in Carthage */ = {isa = PBXBuildFile; fileRef = D2EF1AA71B033A0200E387B3 /* Miles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D2EF1AA91B033A0800E387B3 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D2EF1AAA1B033A1E00E387B3 /* Miles.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		D2AB8D9B19CC39BB00F9138F /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		D2AB8D9C19CC39BB00F9138F /* TestLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLogger.swift; sourceTree = "<group>"; };
 		D2AB8D9F19CC39DA00F9138F /* TimberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimberTests.swift; sourceTree = "<group>"; };
 		D2E8FA2D19CB4E38007AA6E9 /* Timber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +65,7 @@
 		D2E8FA5219CB4EB9007AA6E9 /* MessageFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFormatter.swift; sourceTree = "<group>"; };
 		D2E8FA5319CB4EB9007AA6E9 /* Timber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timber.swift; sourceTree = "<group>"; };
 		D2E8FA5419CB4EB9007AA6E9 /* XcodeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeLogger.swift; sourceTree = "<group>"; };
+		D2EF1AA71B033A0200E387B3 /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = ../../Carthage/Build/iOS/Miles.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2E8FA3919CB4E38007AA6E9 /* Timber.framework in Frameworks */,
+				D2EF1AA81B033A0200E387B3 /* Miles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				D2AB8D9F19CC39DA00F9138F /* TimberTests.swift */,
-				D2AB8D9B19CC39BB00F9138F /* TestExtensions.swift */,
 				D2AB8D9C19CC39BB00F9138F /* TestLogger.swift */,
 				D2E8FA4919CB4E63007AA6E9 /* Supporting Files */,
 			);
@@ -119,6 +134,7 @@
 		D2E8FA4919CB4E63007AA6E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2EF1AA71B033A0200E387B3 /* Miles.framework */,
 				D2E8FA4A19CB4E63007AA6E9 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -171,6 +187,7 @@
 				D2E8FA3419CB4E38007AA6E9 /* Sources */,
 				D2E8FA3519CB4E38007AA6E9 /* Frameworks */,
 				D2E8FA3619CB4E38007AA6E9 /* Resources */,
+				D2EF1AA91B033A0800E387B3 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -259,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AB8D9E19CC39BB00F9138F /* TestLogger.swift in Sources */,
-				D2AB8D9D19CC39BB00F9138F /* TestExtensions.swift in Sources */,
 				D2AB8DA019CC39DA00F9138F /* TimberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,12 +416,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -417,8 +435,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

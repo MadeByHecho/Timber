@@ -9,6 +9,15 @@
 import UIKit
 import XCTest
 import Timber
+import Miles
+
+func wait() {
+    waitForSeconds(1.0)
+}
+
+func waitForSeconds(seconds: NSTimeInterval) {
+    NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate(timeIntervalSinceNow: seconds))
+}
 
 class TimberTests: XCTestCase {
     

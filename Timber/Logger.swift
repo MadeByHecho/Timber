@@ -13,7 +13,7 @@ public protocol Logger {
     func logMessage(message: LogMessage)
 }
 
-public enum LogLevel: Int {
+public enum LogLevel: Int, Comparable {
     case None = 0
     case Error
     case Warn
@@ -30,11 +30,31 @@ public enum LogLevel: Int {
         case .Warn:
             return "WARNING"
         case .Info:
-            return "Info"
+            return "INFO"
         case .Debug:
-            return "Debug"
+            return "DEBUG"
         case .Verbose:
-            return "Verbose"
+            return "VERBOSE"
         }
     }
+}
+
+public func ==(lhs: LogLevel, rhs: LogLevel) -> Bool {
+    return lhs.rawValue == rhs.rawValue
+}
+
+public func <=(lhs: LogLevel, rhs: LogLevel) -> Bool {
+    return lhs.rawValue <= rhs.rawValue
+}
+
+public func >=(lhs: LogLevel, rhs: LogLevel) -> Bool {
+    return lhs.rawValue >= rhs.rawValue
+}
+
+public func >(lhs: LogLevel, rhs: LogLevel) -> Bool {
+    return lhs.rawValue > rhs.rawValue
+}
+
+public func <(lhs: LogLevel, rhs: LogLevel) -> Bool {
+    return lhs.rawValue < rhs.rawValue
 }
