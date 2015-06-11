@@ -82,7 +82,7 @@ struct FileManager {
     
     static func applicationName() -> String {
         let processName = NSProcessInfo.processInfo().processName
-        if count(processName) > 0 {
+        if processName.characters.count > 0 {
             return processName
         } else {
             return "<UnnamedApp>"
@@ -91,14 +91,17 @@ struct FileManager {
     
     static func defaultLogsDirectory() -> String? {
         // Update how we get file URLs per Apple Technical Note https://developer.apple.com/library/ios/technotes/tn2406/_index.html
-        let cachesDirectoryPathURL = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).last as! NSURL
+        let cachesDirectoryPathURL = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).last as NSURL!
         
         if cachesDirectoryPathURL.fileURL {
             if let cachesDirectoryPath = cachesDirectoryPathURL.path {
                 let logsDirectory = cachesDirectoryPath.stringByAppendingPathComponent("Timber")
                 
                 if !NSFileManager.defaultManager().fileExistsAtPath(logsDirectory) {
-                    NSFileManager.defaultManager().createDirectoryAtPath(logsDirectory, withIntermediateDirectories: true, attributes: nil, error: nil)
+                    do {
+                        try NSFileManager.defaultManager().createDirectoryAtPath(logsDirectory, withIntermediateDirectories: true, attributes: nil)
+                    } catch _ {
+                    }
                 }
                 
                 return logsDirectory
@@ -142,69 +145,101 @@ public struct TrashMan {
     }
     
     public static func takeOutFilesInDirectory(directoryPath: String, withExtension fileExtension: String?, notModifiedSince minimumModifiedDate: NSDate) {
-        if let fileURL = NSURL(fileURLWithPath: directoryPath, isDirectory: true) {
-            let fileManager = NSFileManager.defaultManager()
-            let contents = fileManager.contentsOfDirectoryAtURL(fileURL, includingPropertiesForKeys: [NSURLAttributeModificationDateKey], options: .SkipsHiddenFiles, error: nil)
-            
-            if let files = contents as? [NSURL] {
-                for file in files {
-                    var fileDate: AnyObject?
-                    
-                    let haveDate = file.getResourceValue(&fileDate, forKey: NSURLAttributeModificationDateKey, error: nil)
-                    if !haveDate {
+        let fileURL = NSURL(fileURLWithPath: directoryPath, isDirectory: true)
+        let fileManager = NSFileManager.defaultManager()
+        let contents: [AnyObject]?
+        do {
+            contents = try fileManager.contentsOfDirectoryAtURL(fileURL, includingPropertiesForKeys: [NSURLAttributeModificationDateKey], options: .SkipsHiddenFiles)
+        } catch _ {
+            contents = nil
+        }
+        
+        if let files = contents as? [NSURL] {
+            for file in files {
+                var fileDate: AnyObject?
+                
+                let haveDate: Bool
+                do {
+                    try file.getResourceValue(&fileDate, forKey: NSURLAttributeModificationDateKey)
+                    haveDate = true
+                } catch _ {
+                    haveDate = false
+                }
+                if !haveDate {
+                    continue
+                }
+                
+                if fileDate?.timeIntervalSince1970 >= minimumModifiedDate.timeIntervalSince1970 {
+                    continue
+                }
+                
+                if fileExtension != nil {
+                    if file.pathExtension != fileExtension! {
                         continue
                     }
-                    
-                    if fileDate?.timeIntervalSince1970 >= minimumModifiedDate.timeIntervalSince1970 {
-                        continue
-                    }
-                    
-                    if fileExtension != nil {
-                        if file.pathExtension != fileExtension! {
-                            continue
-                        }
-                    }
-                    
-                    fileManager.removeItemAtURL(file, error: nil)
+                }
+                
+                do {
+                    try fileManager.removeItemAtURL(file)
+                } catch _ {
                 }
             }
         }
     }
     
     public static func takeOutOldestFilesInDirectory(directoryPath: String, greaterThanCount count: Int) {
-        if let directoryURL = NSURL(fileURLWithPath: directoryPath, isDirectory: true) {
-            let contents = NSFileManager.defaultManager().contentsOfDirectoryAtURL(directoryURL, includingPropertiesForKeys: [NSURLCreationDateKey], options: .SkipsHiddenFiles, error: nil)
+        let directoryURL = NSURL(fileURLWithPath: directoryPath, isDirectory: true)
+        let contents: [AnyObject]?
+        do {
+            contents = try NSFileManager.defaultManager().contentsOfDirectoryAtURL(directoryURL, includingPropertiesForKeys: [NSURLCreationDateKey], options: .SkipsHiddenFiles)
+        } catch _ {
+            contents = nil
+        }
+        
+        if let files = contents as? [NSURL] {
+            if count >= files.count {
+                return
+            }
             
-            if let files = contents as? [NSURL] {
-                if count >= files.count {
-                    return
+            let sortedFiles = files.sort({ (firstFile: NSURL, secondFile: NSURL) -> Bool in
+                var firstFileObject: AnyObject?
+                
+                let haveFirstDate: Bool
+                do {
+                    try firstFile.getResourceValue(&firstFileObject, forKey: NSURLCreationDateKey)
+                    haveFirstDate = true
+                } catch _ {
+                    haveFirstDate = false
+                }
+                if !haveFirstDate {
+                    return false
                 }
                 
-                let sortedFiles = files.sorted({ (firstFile: NSURL, secondFile: NSURL) -> Bool in
-                    var firstFileObject: AnyObject?
-                    
-                    let haveFirstDate = firstFile.getResourceValue(&firstFileObject, forKey: NSURLCreationDateKey, error: nil)
-                    if !haveFirstDate {
-                        return false
-                    }
-                    
-                    var secondFileObject: AnyObject?
-                    
-                    let haveSecondDate = secondFile.getResourceValue(&secondFileObject, forKey: NSURLCreationDateKey, error: nil)
-                    if !haveSecondDate {
-                        return true
-                    }
-                    
-                    let firstFileDate = firstFileObject as! NSDate
-                    let secondFileDate = secondFileObject as! NSDate
-                    
-                    let comparisonResult = firstFileDate.compare(secondFileDate)
-                    return comparisonResult == NSComparisonResult.OrderedDescending
-                })
+                var secondFileObject: AnyObject?
                 
-                for (index, fileURL) in enumerate(sortedFiles) {
-                    if index >= count {
-                        NSFileManager.defaultManager().removeItemAtURL(fileURL, error: nil)
+                let haveSecondDate: Bool
+                do {
+                    try secondFile.getResourceValue(&secondFileObject, forKey: NSURLCreationDateKey)
+                    haveSecondDate = true
+                } catch _ {
+                    haveSecondDate = false
+                }
+                if !haveSecondDate {
+                    return true
+                }
+                
+                let firstFileDate = firstFileObject as! NSDate
+                let secondFileDate = secondFileObject as! NSDate
+                
+                let comparisonResult = firstFileDate.compare(secondFileDate)
+                return comparisonResult == NSComparisonResult.OrderedDescending
+            })
+            
+            for (index, fileURL) in sortedFiles.enumerate() {
+                if index >= count {
+                    do {
+                        try NSFileManager.defaultManager().removeItemAtURL(fileURL)
+                    } catch _ {
                     }
                 }
             }

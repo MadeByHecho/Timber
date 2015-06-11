@@ -21,7 +21,7 @@ public struct XcodeLogger: Logger {
     public func logMessage(message: LogMessage) {
         let messageToLog = messageFormatter.formatLogMessage(message)
         
-        println(messageToLog)
+        print(messageToLog)
     }
     
 }

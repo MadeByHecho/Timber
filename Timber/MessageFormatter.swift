@@ -14,7 +14,7 @@ public protocol MessageFormatterType {
 
 public struct MessageFormatter: MessageFormatterType {
     
-    private let calendarUnitFlags: NSCalendarUnit = .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond | .CalendarUnitNanosecond
+    private let calendarUnitFlags: NSCalendarUnit = [.Year, .Month, .Day, .Hour, .Minute, .Second, .Nanosecond]
     private let appName = FileManager.applicationName()
     
     public init() {

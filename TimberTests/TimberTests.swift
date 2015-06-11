@@ -123,12 +123,18 @@ class TrashManTests: XCTestCase {
         super.setUp()
         
         if !NSFileManager.defaultManager().fileExistsAtPath(trashManDirectory!) {
-            NSFileManager.defaultManager().createDirectoryAtPath(trashManDirectory!, withIntermediateDirectories: true, attributes: nil, error: nil)
+            do {
+                try NSFileManager.defaultManager().createDirectoryAtPath(trashManDirectory!, withIntermediateDirectories: true, attributes: nil)
+            } catch _ {
+            }
         }
     }
     
     override func tearDown() {
-        NSFileManager.defaultManager().removeItemAtPath(trashManDirectory!, error: nil)
+        do {
+            try NSFileManager.defaultManager().removeItemAtPath(trashManDirectory!)
+        } catch _ {
+        }
         
         super.tearDown()
     }
@@ -177,11 +183,11 @@ class TrashManTests: XCTestCase {
         
         TrashMan.takeOutOldestFilesInDirectory(trashManDirectory!, greaterThanCount: 2)
         
-        let fileCount = NSFileManager.defaultManager().contentsOfDirectoryAtPath(trashManDirectory!, error: nil)?.count
+        let fileCount = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(trashManDirectory!).count
         let firstFileExists = NSFileManager.defaultManager().fileExistsAtPath(firstFilePath)
         let thirdFileExists = NSFileManager.defaultManager().fileExistsAtPath(thirdFilePath)
         
-        fileCount!.shouldEqual(2)
+        fileCount.shouldEqual(2)
         firstFileExists.shouldBeFalse()
         thirdFileExists.shouldBeTrue()
     }
@@ -192,7 +198,10 @@ class TrashManTests: XCTestCase {
     
     func addTestFileWithName(name: String) -> String {
         let filePath = trashManDirectory?.stringByAppendingPathComponent(name)
-        let fileToWrite = "file to write".writeToFile(filePath!, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+        do {
+            try "file to write".writeToFile(filePath!, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch _ {
+        }
         
         return filePath!
     }

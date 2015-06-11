@@ -6,31 +6,31 @@
 	<dict>
 		<key>Headers/Miles-Swift.h</key>
 		<data>
-		OF4JCWrgV4p+EazpZGNo64nN9Ik=
+		4Y39+wXqupj6XiCljrMl9Mko4kM=
 		</data>
 		<key>Headers/Miles.h</key>
 		<data>
-		NLYt4+TSgUWyhaxz4z1zd/VwyeI=
+		WrDIATWQLt+BD5+FLwo1QEF3zhA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tbCns56j3GjlaZzBWi+hEcQYnSU=
+		zg20dvOaR2ii1gywPA+5lnFiIE8=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftdoc</key>
 		<data>
-		PecOzWzAaR/9HaN169vrF01xoVo=
+		j750XI041Wy3gGweRQ8zEa1OJQk=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftmodule</key>
 		<data>
-		SLx0gdYPApvHCZSIgtYyWGH/RQ8=
+		zc4naKm0gG7n5369CCEMS8H2Hpk=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		f6MrNKpqRLG0j6Ei3Ino0MRZsSY=
+		jc6ulOSPEfg/urbRni8kLepzN8k=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		o2s7rosvWXiViBTpbPU5vZqpXwg=
+		heQQ0uK6aNohUV8J4htRlhUDrvM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,27 +41,27 @@
 	<dict>
 		<key>Headers/Miles-Swift.h</key>
 		<data>
-		OF4JCWrgV4p+EazpZGNo64nN9Ik=
+		4Y39+wXqupj6XiCljrMl9Mko4kM=
 		</data>
 		<key>Headers/Miles.h</key>
 		<data>
-		NLYt4+TSgUWyhaxz4z1zd/VwyeI=
+		WrDIATWQLt+BD5+FLwo1QEF3zhA=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftdoc</key>
 		<data>
-		PecOzWzAaR/9HaN169vrF01xoVo=
+		j750XI041Wy3gGweRQ8zEa1OJQk=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftmodule</key>
 		<data>
-		SLx0gdYPApvHCZSIgtYyWGH/RQ8=
+		zc4naKm0gG7n5369CCEMS8H2Hpk=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		f6MrNKpqRLG0j6Ei3Ino0MRZsSY=
+		jc6ulOSPEfg/urbRni8kLepzN8k=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		o2s7rosvWXiViBTpbPU5vZqpXwg=
+		heQQ0uK6aNohUV8J4htRlhUDrvM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
