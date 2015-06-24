@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Scott Petit. All rights reserved.
 //
 
-import UIKit
 import XCTest
 import Timber
 import Miles
@@ -177,7 +176,9 @@ class TrashManTests: XCTestCase {
         
         let firstFilePath = addTestFileWithName("test1.txt")
         wait()
-        addTestFileWithName("test2.txt")
+        wait()
+        let secondFilePath = addTestFileWithName("test2.txt")
+        wait()
         wait()
         let thirdFilePath = addTestFileWithName("test3.txt")
         
@@ -185,10 +186,12 @@ class TrashManTests: XCTestCase {
         
         let fileCount = try! NSFileManager.defaultManager().contentsOfDirectoryAtPath(trashManDirectory!).count
         let firstFileExists = NSFileManager.defaultManager().fileExistsAtPath(firstFilePath)
+        let secondFileExists = NSFileManager.defaultManager().fileExistsAtPath(secondFilePath)
         let thirdFileExists = NSFileManager.defaultManager().fileExistsAtPath(thirdFilePath)
         
         fileCount.shouldEqual(2)
         firstFileExists.shouldBeFalse()
+        secondFileExists.shouldBeTrue()
         thirdFileExists.shouldBeTrue()
     }
     

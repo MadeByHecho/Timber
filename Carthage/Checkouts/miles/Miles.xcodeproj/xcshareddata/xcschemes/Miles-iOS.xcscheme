@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2E8FA2C19CB4E38007AA6E9"
-               BuildableName = "Timber.framework"
-               BlueprintName = "Timber"
-               ReferencedContainer = "container:Timber.xcodeproj">
+               BlueprintIdentifier = "D20880011A9201C100C6D7AC"
+               BuildableName = "Miles-iOS.framework"
+               BlueprintName = "Miles-iOS"
+               ReferencedContainer = "container:Miles.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2E8FA3719CB4E38007AA6E9"
-               BuildableName = "TimberTests.xctest"
-               BlueprintName = "TimberTests"
-               ReferencedContainer = "container:Timber.xcodeproj">
+               BlueprintIdentifier = "D20AD96E1A91D15E0043E5C5"
+               BuildableName = "Miles-iOSTests.xctest"
+               BlueprintName = "Miles-iOSTests"
+               ReferencedContainer = "container:Miles.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2E8FA3719CB4E38007AA6E9"
-               BuildableName = "TimberTests.xctest"
-               BlueprintName = "TimberTests"
-               ReferencedContainer = "container:Timber.xcodeproj">
+               BlueprintIdentifier = "D20AD96E1A91D15E0043E5C5"
+               BuildableName = "Miles-iOSTests.xctest"
+               BlueprintName = "Miles-iOSTests"
+               ReferencedContainer = "container:Miles.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2E8FA2C19CB4E38007AA6E9"
-            BuildableName = "Timber.framework"
-            BlueprintName = "Timber"
-            ReferencedContainer = "container:Timber.xcodeproj">
+            BlueprintIdentifier = "D20880011A9201C100C6D7AC"
+            BuildableName = "Miles-iOS.framework"
+            BlueprintName = "Miles-iOS"
+            ReferencedContainer = "container:Miles.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,15 +75,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2E8FA2C19CB4E38007AA6E9"
-            BuildableName = "Timber.framework"
-            BlueprintName = "Timber"
-            ReferencedContainer = "container:Timber.xcodeproj">
+            BlueprintIdentifier = "D20880011A9201C100C6D7AC"
+            BuildableName = "Miles-iOS.framework"
+            BlueprintName = "Miles-iOS"
+            ReferencedContainer = "container:Miles.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -93,15 +94,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2E8FA2C19CB4E38007AA6E9"
-            BuildableName = "Timber.framework"
-            BlueprintName = "Timber"
-            ReferencedContainer = "container:Timber.xcodeproj">
+            BlueprintIdentifier = "D20880011A9201C100C6D7AC"
+            BuildableName = "Miles-iOS.framework"
+            BlueprintName = "Miles-iOS"
+            ReferencedContainer = "container:Miles.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

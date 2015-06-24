@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Timber.xcscheme_^#shared#^_</key>
+		<key>Timber-OSX.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Timber-iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D29F64C31B3A786D00D1555B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D29F64CC1B3A786D00D1555B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D2E8FA2C19CB4E38007AA6E9</key>
 		<dict>
 			<key>primary</key>

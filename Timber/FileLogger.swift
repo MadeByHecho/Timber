@@ -208,7 +208,7 @@ public struct TrashMan {
                 do {
                     try firstFile.getResourceValue(&firstFileObject, forKey: NSURLCreationDateKey)
                     haveFirstDate = true
-                } catch _ {
+                } catch {
                     haveFirstDate = false
                 }
                 if !haveFirstDate {
@@ -221,7 +221,7 @@ public struct TrashMan {
                 do {
                     try secondFile.getResourceValue(&secondFileObject, forKey: NSURLCreationDateKey)
                     haveSecondDate = true
-                } catch _ {
+                } catch {
                     haveSecondDate = false
                 }
                 if !haveSecondDate {
@@ -239,7 +239,7 @@ public struct TrashMan {
                 if index >= count {
                     do {
                         try NSFileManager.defaultManager().removeItemAtURL(fileURL)
-                    } catch _ {
+                    } catch {
                     }
                 }
             }
