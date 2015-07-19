@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Timber
+@testable import Timber
 import Miles
 
 func wait() {

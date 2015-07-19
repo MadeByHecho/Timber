@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Logger {
+public protocol LoggerType {
     var messageFormatter: MessageFormatterType { get }
     func logMessage(message: LogMessage)
 }

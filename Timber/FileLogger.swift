@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct FileLogger: Logger {
+public struct FileLogger: LoggerType {
     
     public init() {
         FileManager.purgeOldFiles()
@@ -138,13 +138,13 @@ struct FileManager {
     }
 }
 
-public struct TrashMan {
+struct TrashMan {
     
-    public static func takeOutFilesInDirectory(directoryPath: String, notModifiedSince minimumModifiedDate: NSDate) {
+    static func takeOutFilesInDirectory(directoryPath: String, notModifiedSince minimumModifiedDate: NSDate) {
         takeOutFilesInDirectory(directoryPath, withExtension: nil, notModifiedSince: minimumModifiedDate)
     }
     
-    public static func takeOutFilesInDirectory(directoryPath: String, withExtension fileExtension: String?, notModifiedSince minimumModifiedDate: NSDate) {
+    static func takeOutFilesInDirectory(directoryPath: String, withExtension fileExtension: String?, notModifiedSince minimumModifiedDate: NSDate) {
         let fileURL = NSURL(fileURLWithPath: directoryPath, isDirectory: true)
         let fileManager = NSFileManager.defaultManager()
         let contents: [AnyObject]?
@@ -187,7 +187,7 @@ public struct TrashMan {
         }
     }
     
-    public static func takeOutOldestFilesInDirectory(directoryPath: String, greaterThanCount count: Int) {
+    static func takeOutOldestFilesInDirectory(directoryPath: String, greaterThanCount count: Int) {
         let directoryURL = NSURL(fileURLWithPath: directoryPath, isDirectory: true)
         let contents: [AnyObject]?
         do {

@@ -50,11 +50,15 @@ public func Trace(file: String = __FILE__, function: String = __FUNCTION__, line
     LogInfo("", file: file, function: function, line: line)
 }
 
+public func LogBasic(message: String) {
+    
+}
+
 private let sharedInstance = Timber()
 
 public class Timber {
     
-    private var loggers = [Logger]()
+    private var loggers = [LoggerType]()
     private var logLevel = LogLevel.Verbose
     
     //MARK: Public
@@ -63,7 +67,7 @@ public class Timber {
         Timber.sharedTimber().logLevel = level
     }
     
-    public class func addLogger(logger: Logger) {
+    public class func addLogger(logger: LoggerType) {
         Timber.sharedTimber().addLogger(logger)
     }
     
@@ -73,7 +77,7 @@ public class Timber {
         return sharedInstance
     }
     
-    private func addLogger(logger: Logger) {
+    private func addLogger(logger: LoggerType) {
         loggers.append(logger)
     }
     

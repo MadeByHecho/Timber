@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct XcodeLogger: Logger {
+public struct XcodeLogger: LoggerType {
     
     public init() {
         

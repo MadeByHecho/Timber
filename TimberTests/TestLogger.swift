@@ -9,7 +9,7 @@
 import Foundation
 import Timber
 
-class TestLogger: Logger {
+class TestLogger: LoggerType {
     
     var loggedMessageCount: Int = 0
     var lastLoggedMessage: String = ""
