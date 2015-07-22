@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Miles-Swift.h</key>
 		<data>
-		HiVRV8Q7smbfofP3d8JQWU8qwl8=
+		vlB0i9iypNe45DRjIbfstgN8RKM=
 		</data>
 		<key>Headers/Miles.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3gBCcIZPzaxC8XR4rcxAx6PZOOQ=
+		6T7uTtjsiUTkVIBPxceKEb6mqPk=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftdoc</key>
 		<data>
-		NDAS7RoI6/ORfNdWVjyseDEiUIY=
+		AVhoilJESAcJFH6Ur/fPhDj7cP4=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftmodule</key>
 		<data>
-		PIBzSvgj0FihlPU+U7rpOXxxetU=
+		Bmt95mSmK0nZKKH8OOOh5SiI7CA=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		3iETsINcJZmXD60AU6TQwtw7ZQI=
+		aLJL2kJLZJyqpMPasBGXChwReXY=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		dI0uIoCRQJ2waMbnOQsW5BZgPNs=
+		j4tfc/RXyFaBKpt2/4eopCQm9qU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,7 +41,7 @@
 	<dict>
 		<key>Headers/Miles-Swift.h</key>
 		<data>
-		HiVRV8Q7smbfofP3d8JQWU8qwl8=
+		vlB0i9iypNe45DRjIbfstgN8RKM=
 		</data>
 		<key>Headers/Miles.h</key>
 		<data>
@@ -49,19 +49,19 @@
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftdoc</key>
 		<data>
-		NDAS7RoI6/ORfNdWVjyseDEiUIY=
+		AVhoilJESAcJFH6Ur/fPhDj7cP4=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm.swiftmodule</key>
 		<data>
-		PIBzSvgj0FihlPU+U7rpOXxxetU=
+		Bmt95mSmK0nZKKH8OOOh5SiI7CA=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		3iETsINcJZmXD60AU6TQwtw7ZQI=
+		aLJL2kJLZJyqpMPasBGXChwReXY=
 		</data>
 		<key>Modules/Miles.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		dI0uIoCRQJ2waMbnOQsW5BZgPNs=
+		j4tfc/RXyFaBKpt2/4eopCQm9qU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
