@@ -7,18 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D21E83E71B60C32800E2915A /* Miles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF1AA71B033A0200E387B3 /* Miles.framework */; };
 		D29F64C71B3A786D00D1555B /* Timber.h in Headers */ = {isa = PBXBuildFile; fileRef = D29F64C61B3A786D00D1555B /* Timber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D29F64CE1B3A786D00D1555B /* Timber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29F64C41B3A786D00D1555B /* Timber.framework */; };
 		D29F64DB1B3A787100D1555B /* Timber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5319CB4EB9007AA6E9 /* Timber.swift */; };
 		D29F64DC1B3A787500D1555B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5019CB4EB9007AA6E9 /* Logger.swift */; };
 		D29F64DD1B3A787500D1555B /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5119CB4EB9007AA6E9 /* LogMessage.swift */; };
 		D29F64DE1B3A787500D1555B /* MessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5219CB4EB9007AA6E9 /* MessageFormatter.swift */; };
 		D29F64DF1B3A787500D1555B /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */; };
 		D29F64E01B3A787500D1555B /* XcodeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5419CB4EB9007AA6E9 /* XcodeLogger.swift */; };
-		D29F64E51B3A805600D1555B /* Miles.framework in Carthage */ = {isa = PBXBuildFile; fileRef = D29F64E41B3A805600D1555B /* Miles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D2E8FA3319CB4E38007AA6E9 /* Timber.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E8FA3219CB4E38007AA6E9 /* Timber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2E8FA3919CB4E38007AA6E9 /* Timber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E8FA2D19CB4E38007AA6E9 /* Timber.framework */; };
 		D2E8FA5519CB4EB9007AA6E9 /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */; };
 		D2E8FA5619CB4EB9007AA6E9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5019CB4EB9007AA6E9 /* Logger.swift */; };
 		D2E8FA5719CB4EB9007AA6E9 /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5119CB4EB9007AA6E9 /* LogMessage.swift */; };
@@ -31,62 +27,16 @@
 		D2E8FA6B19CB56E2007AA6E9 /* MessageFormatter.swift in Resources */ = {isa = PBXBuildFile; fileRef = D2E8FA5219CB4EB9007AA6E9 /* MessageFormatter.swift */; };
 		D2E8FA6C19CB56E2007AA6E9 /* FileLogger.swift in Resources */ = {isa = PBXBuildFile; fileRef = D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */; };
 		D2E8FA6D19CB56E2007AA6E9 /* XcodeLogger.swift in Resources */ = {isa = PBXBuildFile; fileRef = D2E8FA5419CB4EB9007AA6E9 /* XcodeLogger.swift */; };
-		D2EF1AA81B033A0200E387B3 /* Miles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF1AA71B033A0200E387B3 /* Miles.framework */; };
-		D2EF1AAA1B033A1E00E387B3 /* Miles.framework in Carthage */ = {isa = PBXBuildFile; fileRef = D2EF1AA71B033A0200E387B3 /* Miles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D29F64CF1B3A786D00D1555B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2E8FA2419CB4E37007AA6E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D29F64C31B3A786D00D1555B;
-			remoteInfo = "Timber-OSX";
-		};
-		D2E8FA3A19CB4E38007AA6E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2E8FA2419CB4E37007AA6E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2E8FA2C19CB4E38007AA6E9;
-			remoteInfo = Timber;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D29F64E31B3A804900D1555B /* Carthage */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D29F64E51B3A805600D1555B /* Miles.framework in Carthage */,
-			);
-			name = Carthage;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2EF1AA91B033A0800E387B3 /* Carthage */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D2EF1AAA1B033A1E00E387B3 /* Miles.framework in Carthage */,
-			);
-			name = Carthage;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D29F64C41B3A786D00D1555B /* Timber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F64C61B3A786D00D1555B /* Timber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timber.h; sourceTree = "<group>"; };
-		D29F64CD1B3A786D00D1555B /* Timber-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timber-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F64E41B3A805600D1555B /* Miles.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Miles.framework; path = Carthage/Build/Mac/Miles.framework; sourceTree = "<group>"; };
 		D2AB8D9C19CC39BB00F9138F /* TestLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLogger.swift; sourceTree = "<group>"; };
 		D2AB8D9F19CC39DA00F9138F /* TimberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimberTests.swift; sourceTree = "<group>"; };
 		D2E8FA2D19CB4E38007AA6E9 /* Timber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E8FA3219CB4E38007AA6E9 /* Timber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timber.h; sourceTree = "<group>"; };
-		D2E8FA3819CB4E38007AA6E9 /* Timber-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Timber-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E8FA4A19CB4E63007AA6E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E8FA4D19CB4E68007AA6E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLogger.swift; sourceTree = "<group>"; };
@@ -106,28 +56,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D29F64CA1B3A786D00D1555B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D29F64CE1B3A786D00D1555B /* Timber.framework in Frameworks */,
-				D21E83E71B60C32800E2915A /* Miles.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2E8FA2919CB4E38007AA6E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2E8FA3519CB4E38007AA6E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2E8FA3919CB4E38007AA6E9 /* Timber.framework in Frameworks */,
-				D2EF1AA81B033A0200E387B3 /* Miles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				D2E8FA2D19CB4E38007AA6E9 /* Timber.framework */,
-				D2E8FA3819CB4E38007AA6E9 /* Timber-IOSTests.xctest */,
 				D29F64C41B3A786D00D1555B /* Timber.framework */,
-				D29F64CD1B3A786D00D1555B /* Timber-OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,25 +184,6 @@
 			productReference = D29F64C41B3A786D00D1555B /* Timber.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D29F64CC1B3A786D00D1555B /* Timber-OSXTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D29F64DA1B3A786D00D1555B /* Build configuration list for PBXNativeTarget "Timber-OSXTests" */;
-			buildPhases = (
-				D29F64C91B3A786D00D1555B /* Sources */,
-				D29F64CA1B3A786D00D1555B /* Frameworks */,
-				D29F64CB1B3A786D00D1555B /* Resources */,
-				D29F64E31B3A804900D1555B /* Carthage */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D29F64D01B3A786D00D1555B /* PBXTargetDependency */,
-			);
-			name = "Timber-OSXTests";
-			productName = "Timber-OSXTests";
-			productReference = D29F64CD1B3A786D00D1555B /* Timber-OSXTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		D2E8FA2C19CB4E38007AA6E9 /* Timber-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2E8FA4319CB4E38007AA6E9 /* Build configuration list for PBXNativeTarget "Timber-iOS" */;
@@ -291,25 +202,6 @@
 			productReference = D2E8FA2D19CB4E38007AA6E9 /* Timber.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D2E8FA3719CB4E38007AA6E9 /* Timber-IOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2E8FA4619CB4E38007AA6E9 /* Build configuration list for PBXNativeTarget "Timber-IOSTests" */;
-			buildPhases = (
-				D2E8FA3419CB4E38007AA6E9 /* Sources */,
-				D2E8FA3519CB4E38007AA6E9 /* Frameworks */,
-				D2E8FA3619CB4E38007AA6E9 /* Resources */,
-				D2EF1AA91B033A0800E387B3 /* Carthage */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2E8FA3B19CB4E38007AA6E9 /* PBXTargetDependency */,
-			);
-			name = "Timber-IOSTests";
-			productName = TimberTests;
-			productReference = D2E8FA3819CB4E38007AA6E9 /* Timber-IOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -323,13 +215,7 @@
 					D29F64C31B3A786D00D1555B = {
 						CreatedOnToolsVersion = 7.0;
 					};
-					D29F64CC1B3A786D00D1555B = {
-						CreatedOnToolsVersion = 7.0;
-					};
 					D2E8FA2C19CB4E38007AA6E9 = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					D2E8FA3719CB4E38007AA6E9 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -347,22 +233,13 @@
 			projectRoot = "";
 			targets = (
 				D2E8FA2C19CB4E38007AA6E9 /* Timber-iOS */,
-				D2E8FA3719CB4E38007AA6E9 /* Timber-IOSTests */,
 				D29F64C31B3A786D00D1555B /* Timber-OSX */,
-				D29F64CC1B3A786D00D1555B /* Timber-OSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D29F64C21B3A786D00D1555B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D29F64CB1B3A786D00D1555B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,13 +259,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E8FA3619CB4E38007AA6E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -405,13 +275,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D29F64C91B3A786D00D1555B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2E8FA2819CB4E38007AA6E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,27 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2E8FA3419CB4E38007AA6E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D29F64D01B3A786D00D1555B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D29F64C31B3A786D00D1555B /* Timber-OSX */;
-			targetProxy = D29F64CF1B3A786D00D1555B /* PBXContainerItemProxy */;
-		};
-		D2E8FA3B19CB4E38007AA6E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2E8FA2C19CB4E38007AA6E9 /* Timber-iOS */;
-			targetProxy = D2E8FA3A19CB4E38007AA6E9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D29F64D51B3A786D00D1555B /* Debug */ = {
@@ -490,45 +333,6 @@
 				PRODUCT_NAME = Timber;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D29F64D71B3A786D00D1555B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.hecho.Timber-OSXTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		D29F64D81B3A786D00D1555B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.hecho.Timber-OSXTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -657,40 +461,6 @@
 			};
 			name = Release;
 		};
-		D2E8FA4719CB4E38007AA6E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "scottpetit.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D2E8FA4819CB4E38007AA6E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "scottpetit.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -699,15 +469,6 @@
 			buildConfigurations = (
 				D29F64D51B3A786D00D1555B /* Debug */,
 				D29F64D61B3A786D00D1555B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D29F64DA1B3A786D00D1555B /* Build configuration list for PBXNativeTarget "Timber-OSXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D29F64D71B3A786D00D1555B /* Debug */,
-				D29F64D81B3A786D00D1555B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -726,15 +487,6 @@
 			buildConfigurations = (
 				D2E8FA4419CB4E38007AA6E9 /* Debug */,
 				D2E8FA4519CB4E38007AA6E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2E8FA4619CB4E38007AA6E9 /* Build configuration list for PBXNativeTarget "Timber-IOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2E8FA4719CB4E38007AA6E9 /* Debug */,
-				D2E8FA4819CB4E38007AA6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
