@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21E83E71B60C32800E2915A /* Miles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF1AA71B033A0200E387B3 /* Miles.framework */; };
 		D29F64C71B3A786D00D1555B /* Timber.h in Headers */ = {isa = PBXBuildFile; fileRef = D29F64C61B3A786D00D1555B /* Timber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D29F64CE1B3A786D00D1555B /* Timber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29F64C41B3A786D00D1555B /* Timber.framework */; };
 		D29F64DB1B3A787100D1555B /* Timber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5319CB4EB9007AA6E9 /* Timber.swift */; };
@@ -15,11 +16,7 @@
 		D29F64DE1B3A787500D1555B /* MessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5219CB4EB9007AA6E9 /* MessageFormatter.swift */; };
 		D29F64DF1B3A787500D1555B /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */; };
 		D29F64E01B3A787500D1555B /* XcodeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA5419CB4EB9007AA6E9 /* XcodeLogger.swift */; };
-		D29F64E11B3A787B00D1555B /* TimberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9F19CC39DA00F9138F /* TimberTests.swift */; };
-		D29F64E21B3A787B00D1555B /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9C19CC39BB00F9138F /* TestLogger.swift */; };
 		D29F64E51B3A805600D1555B /* Miles.framework in Carthage */ = {isa = PBXBuildFile; fileRef = D29F64E41B3A805600D1555B /* Miles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D2AB8D9E19CC39BB00F9138F /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9C19CC39BB00F9138F /* TestLogger.swift */; };
-		D2AB8DA019CC39DA00F9138F /* TimberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB8D9F19CC39DA00F9138F /* TimberTests.swift */; };
 		D2E8FA3319CB4E38007AA6E9 /* Timber.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E8FA3219CB4E38007AA6E9 /* Timber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2E8FA3919CB4E38007AA6E9 /* Timber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E8FA2D19CB4E38007AA6E9 /* Timber.framework */; };
 		D2E8FA5519CB4EB9007AA6E9 /* FileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E8FA4F19CB4EB9007AA6E9 /* FileLogger.swift */; };
@@ -114,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29F64CE1B3A786D00D1555B /* Timber.framework in Frameworks */,
+				D21E83E71B60C32800E2915A /* Miles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +409,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29F64E21B3A787B00D1555B /* TestLogger.swift in Sources */,
-				D29F64E11B3A787B00D1555B /* TimberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,8 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AB8D9E19CC39BB00F9138F /* TestLogger.swift in Sources */,
-				D2AB8DA019CC39DA00F9138F /* TimberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +498,10 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -521,7 +518,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "TimberTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
