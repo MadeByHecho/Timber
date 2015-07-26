@@ -13,6 +13,7 @@ public struct FileLogger: LoggerType {
     public init() {
         FileManager.purgeOldFiles()
         FileManager.purgeOldestFilesGreaterThanCount(5)
+        print("Timber - Saving logs to \(FileManager.currentLogFilePath())")
     }
     
     //MARK: Logger
